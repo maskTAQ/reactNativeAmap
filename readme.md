@@ -11,7 +11,7 @@
 
 ### props:locationRepresentationStyle
 
-| 字段名 | 说明 | 类型 | 默认值 | 必须
+| 字段名 | 说明 | 类型 | 默认值 
 | :- | :- | :- |  :- | 
 | showsAccuracyRing | 精度圈是否显示 | bool | false
 | showsHeadingIndicator | 是否显示方向指示 | bool | true
