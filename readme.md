@@ -2,7 +2,6 @@
 
 ## props
 
-
 | 属性 | 说明 | 类型 | 默认值 
 | :- | :- | :- |  :- | 
 | locationEnabled | 显示自身位置 | bool | false
@@ -11,6 +10,7 @@
 | trafficVisible | 显示路况 | bool | false
 
 ### props:locationRepresentationStyle
+
 | 字段名 | 说明 | 类型 | 默认值 | 必须
 | :- | :- | :- |  :- | 
 | showsAccuracyRing | 精度圈是否显示 | bool | false
