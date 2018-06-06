@@ -12,17 +12,14 @@
 
 @implementation RCTConvert (AMapView)
 + (LocationRepresentationStyle *)LocationRepresentationStyle:(id)json {
-  LocationRepresentationStyle *locationRepresentationStyle = [LocationRepresentationStyle new];
   
+  LocationRepresentationStyle *locationRepresentationStyle = [LocationRepresentationStyle new];
   locationRepresentationStyle.showsAccuracyRing = [self BOOL:json[@"showsAccuracyRing"]];
   locationRepresentationStyle.showsHeadingIndicator = [self BOOL:json[@"showsHeadingIndicator"]];
-  
   locationRepresentationStyle.fillColor = [self UIColor:json[@"fillColor"]];
   locationRepresentationStyle.strokeColor = [self UIColor:json[@"strokeColor"]];
-  
   locationRepresentationStyle.lineWidth = [self CGFloat:json[@"lineWidth"]];
   locationRepresentationStyle.enablePulseAnnimation = [self BOOL:json[@"enablePulseAnnimation"]];
-  
   locationRepresentationStyle.locationDotBgColor = [self UIColor:json[@"locationDotBgColor"]];
   locationRepresentationStyle.locationDotFillColor = [self UIColor:json[@"locationDotFillColor"]];
   

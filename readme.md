@@ -1,5 +1,29 @@
 # 基于reactnative的AMap:3D实现
 
+## props
+
+
+| 属性 | 说明 | 类型 | 默认值 
+| :- | :- | :- |  :- | 
+| locationEnabled | 显示自身位置 | bool | false
+| locationRepresentationStyle | 当前位置标记样式 | object | false
+| indoorMapVisible | 显示室内地图 | bool | false
+| trafficVisible | 显示路况 | bool | false
+
+### props:locationRepresentationStyle
+| 字段名 | 说明 | 类型 | 默认值 | 必须
+| :- | :- | :- |  :- | 
+| showsAccuracyRing | 精度圈是否显示 | bool | false
+| showsHeadingIndicator | 是否显示方向指示 | bool | true
+| fillColor | 精度圈 填充颜色 | string | 
+| strokeColor | 精度圈 填充颜色 | string | 
+| lineWidth | 精度圈 边线宽度 | number | 0
+| enablePulseAnnimation | 内部蓝色圆点是否使用律动效果 | bool | true
+| locationDotBgColor | 定位点背景色 | string | #fff
+| locationDotFillColor | 定位点蓝色圆点颜色 | string | blue
+| image | 定位图标src | string | 
+
+
 ## ios
 
 1. 在 AppDelegate.m 文件中引入所需头文件
@@ -13,11 +37,6 @@
 import { requireNativeComponent } from 'react-native';
 const AMap = requireNativeComponent('AMapView', null);
 ```
-5. props
-
-| 属性 | 说明 | 类型 | 默认值 | 必须
-| :- | :- | :- |  :- | 
-| locationEnabled | 显示自身位置 | bool | false
 
 
 # 说明

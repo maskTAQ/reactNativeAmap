@@ -21,10 +21,16 @@ RCT_EXPORT_MODULE()
   mapView.centerCoordinate = CLLocationCoordinate2DMake(39.9242, 116.3979);
   mapView.zoomLevel = 15;
   mapView.zoomEnabled = YES;
+  
+  NSLog(@"AMAP-T init view");
   return mapView;
 }
 
+RCT_EXPORT_VIEW_PROPERTY(trafficVisible, BOOL)
+RCT_EXPORT_VIEW_PROPERTY(indoorMapVisible, BOOL)
 RCT_EXPORT_VIEW_PROPERTY(locationEnabled, BOOL)
 RCT_EXPORT_VIEW_PROPERTY(locationRepresentationStyle, LocationRepresentationStyle)
+
+
 @end
 

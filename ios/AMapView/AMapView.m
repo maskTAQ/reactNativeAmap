@@ -14,15 +14,23 @@
   MAUserLocationRepresentation *_locationRepresentationStyle;
 }
 
+
+- (void)setTrafficVisible:(BOOL)isVisible {
+  NSLog(@"AMAP-T call setShowsTraffic");
+  self.showTraffic = isVisible;
+}
+- (void)setIndoorMapVisible:(BOOL)isVisible {
+  NSLog(@"AMAP-T call setIndoorMapVisible");
+  self.showsIndoorMap = isVisible;
+}
 - (void)setLocationEnabled:(BOOL)enabled {
-  NSLog(enabled?@"启用用户位置":@"禁用用户位置");
+   NSLog(@"AMAP-T call setLocationEnabled");
   self.showsUserLocation = enabled;
   if(enabled){
     self.userTrackingMode = MAUserTrackingModeFollow;
   }
 }
 - (void)setLocationRepresentationStyle:(LocationRepresentationStyle *)style{
-  NSLog(@"小圆点样式 %@",style);
   //初始化小圆点样式
   if(!_locationRepresentationStyle){
     _locationRepresentationStyle = [MAUserLocationRepresentation new];
@@ -50,4 +58,6 @@
   [self updateUserLocationRepresentation:_locationRepresentationStyle];
   
 }
+
+
 @end
