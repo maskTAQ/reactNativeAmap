@@ -8,23 +8,55 @@
 
 #import "AMapView.h"
 #import "LocationRepresentationStyle.h"
+#import "Marker.h"
 
+@interface AMapView() <MAMapViewDelegate>
+@end
 @implementation AMapView
 {
+  //当前位置标记样式
   MAUserLocationRepresentation *_locationRepresentationStyle;
+  //存储地图marker
+  NSMutableDictionary *_markers;
+}
+- (instancetype)init
+{
+  _markers = [NSMutableDictionary new];
+  self = [super init];
+  return self;
 }
 
+- (void)didAddSubview:(UIView *)subview {
+  //当map添加Marker子视图时
+  if ([subview isKindOfClass:[Marker class]]) {
+    Marker *marker = (Marker *) subview;
+    //将标注的mapView指向自身
+    marker.mapView = self;
+    //将标注存储以annotation.hash为key
+    _markers[[@(marker.annotation.hash) stringValue]] = marker;
+    //添加标注
+    NSLog(@"AMAP-T 添加标注 %lu",marker.annotation.hash);
+    [self addAnnotation:marker.annotation];
+  }
 
+}
+
+- (Marker *)getMarker:(id <MAAnnotation>)annotation {
+  return _markers[[@(annotation.hash) stringValue]];
+}
+
+//props start
 - (void)setTrafficVisible:(BOOL)isVisible {
-  NSLog(@"AMAP-T call setShowsTraffic");
   self.showTraffic = isVisible;
 }
+- (BOOL)trafficVisible{
+  return self.showTraffic;
+}
 - (void)setIndoorMapVisible:(BOOL)isVisible {
-  NSLog(@"AMAP-T call setIndoorMapVisible");
+  //NSLog(@"AMAP-T call setIndoorMapVisible");
   self.showsIndoorMap = isVisible;
 }
 - (void)setLocationEnabled:(BOOL)enabled {
-   NSLog(@"AMAP-T call setLocationEnabled");
   self.showsUserLocation = enabled;
   if(enabled){
     self.userTrackingMode = MAUserTrackingModeFollow;
@@ -58,6 +90,6 @@
   [self updateUserLocationRepresentation:_locationRepresentationStyle];
   
 }
-
+//props end
 
 @end

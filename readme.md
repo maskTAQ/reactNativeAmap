@@ -1,11 +1,13 @@
 # 基于reactnative的AMap:3D实现
 
-## props
+
+
+## AMap:props
 
 | 属性 | 说明 | 类型 | 默认值 
 | :- | :- | :- |  :- | 
 | locationEnabled | 显示自身位置 | bool | false
-| locationRepresentationStyle | 当前位置标记样式 | object | false
+| locationRepresentationStyle | locationRepresentationStyle | bool | false
 | indoorMapVisible | 显示室内地图 | bool | false
 | trafficVisible | 显示路况 | bool | false
 
@@ -22,6 +24,13 @@
 | locationDotBgColor | 定位点背景色 | string | #fff
 | locationDotFillColor | 定位点蓝色圆点颜色 | string | blue
 | image | 定位图标src | string | 
+
+## Marker:props
+
+| 属性 | 说明 | 类型 | 默认值 
+| :- | :- | :- |  :- | 
+| title | 点击标注显示的title | string | 
+| subTitle | 点击标注显示的subTitle | string | false
 
 
 ## ios

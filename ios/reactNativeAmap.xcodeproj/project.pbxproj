@@ -39,6 +39,8 @@
 		5C5F3C3120B66D3A00910DDD /* AMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5F3C3020B66D3A00910DDD /* AMap.swift */; };
 		5C7D9A8220C78135004584F7 /* LocationRepresentationStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C7D9A8120C78135004584F7 /* LocationRepresentationStyle.m */; };
 		5C7D9AA920C78883004584F7 /* RCTConvert+AMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C7D9AA820C78883004584F7 /* RCTConvert+AMap.m */; };
+		5C7D9AAD20C7DA9F004584F7 /* Marker.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C7D9AAC20C7DA9F004584F7 /* Marker.m */; };
+		5C7D9AAF20C7DCDC004584F7 /* MarkerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C7D9AAE20C7DCDC004584F7 /* MarkerManager.m */; };
 		5C7DF19B20B678FB001BF9F1 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C7DF17520B678FB001BF9F1 /* MapKit.framework */; };
 		5CFEC0FD20BBB07F00C12AD8 /* AMapViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CFEC0FC20BBB07F00C12AD8 /* AMapViewManager.m */; };
 		5CFEC0FF20BBC67100C12AD8 /* AMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CFEC0FE20BBC67100C12AD8 /* AMapView.m */; };
@@ -353,6 +355,9 @@
 		5C7D9A8020C78135004584F7 /* LocationRepresentationStyle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LocationRepresentationStyle.h; sourceTree = "<group>"; };
 		5C7D9A8120C78135004584F7 /* LocationRepresentationStyle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LocationRepresentationStyle.m; sourceTree = "<group>"; };
 		5C7D9AA820C78883004584F7 /* RCTConvert+AMap.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "RCTConvert+AMap.m"; sourceTree = "<group>"; };
+		5C7D9AAB20C7DA9F004584F7 /* Marker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Marker.h; sourceTree = "<group>"; };
+		5C7D9AAC20C7DA9F004584F7 /* Marker.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Marker.m; sourceTree = "<group>"; };
+		5C7D9AAE20C7DCDC004584F7 /* MarkerManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MarkerManager.m; sourceTree = "<group>"; };
 		5C7DF17520B678FB001BF9F1 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		5CFEC0FB20BBAF9D00C12AD8 /* AMapView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AMapView.h; sourceTree = "<group>"; };
 		5CFEC0FC20BBB07F00C12AD8 /* AMapViewManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AMapViewManager.m; sourceTree = "<group>"; };
@@ -560,9 +565,20 @@
 			name = AMap;
 			sourceTree = "<group>";
 		};
+		5C7D9AAA20C7DA87004584F7 /* Marker */ = {
+			isa = PBXGroup;
+			children = (
+				5C7D9AAB20C7DA9F004584F7 /* Marker.h */,
+				5C7D9AAC20C7DA9F004584F7 /* Marker.m */,
+				5C7D9AAE20C7DCDC004584F7 /* MarkerManager.m */,
+			);
+			name = Marker;
+			sourceTree = "<group>";
+		};
 		5CFEC0D520BBAF8000C12AD8 /* AMapView */ = {
 			isa = PBXGroup;
 			children = (
+				5C7D9AAA20C7DA87004584F7 /* Marker */,
 				5CFEC0FB20BBAF9D00C12AD8 /* AMapView.h */,
 				5CFEC0FC20BBB07F00C12AD8 /* AMapViewManager.m */,
 				5CFEC0FE20BBC67100C12AD8 /* AMapView.m */,
@@ -1224,7 +1240,9 @@
 				5CFEC0FF20BBC67100C12AD8 /* AMapView.m in Sources */,
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
 				5C7D9A8220C78135004584F7 /* LocationRepresentationStyle.m in Sources */,
+				5C7D9AAD20C7DA9F004584F7 /* Marker.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
+				5C7D9AAF20C7DCDC004584F7 /* MarkerManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

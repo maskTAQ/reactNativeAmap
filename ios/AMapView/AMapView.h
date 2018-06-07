@@ -8,7 +8,10 @@
 
 
 #import <MAMapKit/MAMapKit.h>
-#import <AMapFoundationKit/AMapFoundationKit.h>
+#import "AMapView.h"
 
-@interface AMapView : MAMapView
+#import <AMapFoundationKit/AMapFoundationKit.h>
+@class Marker;
+@interface AMapView : MAMapView <MAMapViewDelegate>
+- (Marker *)getMarker:(id <MAAnnotation>)annotation;
 @end
